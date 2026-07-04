@@ -10,8 +10,9 @@ export default function HeroSection() {
   return (
     <div className="relative w-full min-h-screen bg-white dark:bg-zinc-950 text-black dark:text-white overflow-hidden font-sans transition-colors">
       <div
-        className="absolute inset-0 z-0 bg-[url(/bg/use.jpg)] bg-cover bg-center opacity-30 dark:hidden"
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-30 dark:hidden"
         style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}bg/use.jpg)`,
           maskImage: "linear-gradient(180deg, transparent 0%, black 20%, black 60%, transparent)",
           WebkitMaskImage: "linear-gradient(180deg, transparent 0%, black 20%, black 60%, transparent)",
         }}
@@ -63,7 +64,7 @@ export default function HeroSection() {
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gray-900 dark:bg-white px-8 py-4 text-sm font-semibold text-white dark:text-zinc-950 transition-all hover:scale-[1.02] hover:bg-gray-800 dark:hover:bg-zinc-200 active:scale-[0.98]">
                 View Experience <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="/cv/CV-FM-Ngwepe202606.pdf" target="_blank"
+              <a href={import.meta.env.BASE_URL + "cv/CV-FM-Ngwepe202606.pdf"} target="_blank"
                 className="group inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 dark:border-white/10 bg-gray-100/50 dark:bg-white/5 px-8 py-4 text-sm font-semibold text-black dark:text-white backdrop-blur-sm transition-colors hover:bg-gray-200/50 dark:hover:bg-white/10 hover:border-gray-300 dark:hover:border-white/20">
                 <FileText className="w-4 h-4" /> Download CV
               </a>
@@ -73,7 +74,7 @@ export default function HeroSection() {
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-white/20 dark:border-white/10 shadow-2xl">
               <img
-                src="/gallery/IMG_7454.JPG"
+                src={import.meta.env.BASE_URL + "gallery/IMG_7454.JPG"}
                 alt="Frans Matome Ngwepe"
                 className="w-full h-full object-cover"
               />

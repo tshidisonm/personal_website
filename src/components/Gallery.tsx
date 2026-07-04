@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL
+
 const images = [
   "IMG_7387.JPG",
   "IMG_7390.JPG",
@@ -22,13 +24,13 @@ export default function Gallery() {
           {images.map((img, i) => (
             <a
               key={i}
-              href={`/gallery/${img}`}
+              href={BASE + `gallery/${img}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group aspect-[3/2] overflow-hidden rounded-xl border border-gray-200 dark:border-zinc-800 bg-gray-100 dark:bg-zinc-900"
             >
               <img
-                src={`/gallery/${img}`}
+                src={BASE + `gallery/${img}`}
                 alt={`Photo ${i + 1}`}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
